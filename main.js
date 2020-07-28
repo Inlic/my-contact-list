@@ -22,7 +22,6 @@ function addContact(event) {
   contacts.push(newContact);
   saveContacts();
   form.reset();
-  drawContacts();
 }
 
 /**
@@ -31,6 +30,7 @@ function addContact(event) {
  */
 function saveContacts() {
  window.localStorage.setItem("contacts",JSON.stringify(contacts));
+ drawContacts();
 }
 
 /**
@@ -97,7 +97,6 @@ function removeContact(contactId) {
   let index = contacts.findIndex(contact => contact.id === contactId);
   contacts.splice(index,1);
   saveContacts();
-  drawContacts();
 }
 
 /**
