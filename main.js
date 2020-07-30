@@ -93,7 +93,6 @@ function drawContacts() {
  * @param {string} contactId 
  */
 function removeContact(contactId) {
-  console.log(contactId);
   let index = contacts.findIndex(contact => contact.id === contactId);
   contacts.splice(index,1);
   saveContacts();
